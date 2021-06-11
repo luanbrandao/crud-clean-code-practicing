@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --ignore node_modules src/index.ts",
+    "dev:server": "ts-node-dev --inspect --ignore node_modules src/index.ts",
     "start": "ts-node src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest"
