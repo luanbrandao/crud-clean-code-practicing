@@ -1,10 +1,11 @@
 import { DbAddTask } from "../../../data/usecases/task/add-task/db-add-task";
 import { AddTask } from "../../../domain/usecases/task/add-task";
+import { Controller } from '../../protocols/controller'
+export class AddTaskController implements Controller {
 
-export class AddTaskController {
   constructor(private readonly a: AddTask) {}
 
-  async handle(req: any, res: any): Promise<any> {
+  async handle({ req, res }: any): Promise<any> {
     try {
       const requestData = {
         title: "Clean Code",
