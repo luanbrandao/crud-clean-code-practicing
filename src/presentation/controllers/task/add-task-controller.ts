@@ -1,5 +1,5 @@
 import { AddTask } from "../../../domain/usecases/task/add-task";
-import { ok } from "../../helpers/http/http-helper";
+import { ok, serverError } from "../../helpers/http/http-helper";
 import { HttpRequest, HttpResponse } from "../../protocols";
 import { Controller } from "../../protocols/controller";
 export class AddTaskController implements Controller {
@@ -17,10 +17,7 @@ export class AddTaskController implements Controller {
       return ok(task)
     } catch (error) {
       console.log(error);
-      return {
-        statusCode: 500,
-        body: { message : 'error'}
-      }
+      return serverError();
     }
   }
 }
