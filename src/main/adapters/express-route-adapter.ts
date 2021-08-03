@@ -2,7 +2,7 @@
 import { Request, Response } from 'express'
 
 // Adapter pois o express espera nas rotas o (res,req)
-export const adaptRoute = (controller: any) => {
+export const adapterRoute = (controller: any) => {
 return async (req: Request, res: Response) => {
   const httpRequest: any= {
     body: req.body,
