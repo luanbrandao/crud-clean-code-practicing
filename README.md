@@ -1,0 +1,1 @@
+Projeto feito apenas com a intenção de praticar arquitetura utilizando consoles.log
